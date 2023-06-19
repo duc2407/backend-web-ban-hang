@@ -26,8 +26,9 @@ let initWebRoutes = (app) => {
 
     // thêm, sửa, xóa size hàng
     router.get('/api/get-all-size', sizeController.handleGetAllSize);
-    router.put('/api/edit-size', sizeController.handleEditSize);
+    router.get('/api/get-size-by-id-size', sizeController.handleGetSizeById)
     router.post('/api/create-size', sizeController.handleCreateSize);
+    router.put('/api/edit-size', sizeController.handleEditSize);
     router.delete('/api/delete-size', sizeController.handleDeleteSize);
 
     // thêm, sửa, xóa danh mục sản phẩm 
@@ -44,8 +45,7 @@ let initWebRoutes = (app) => {
 
     // thêm, sửa, xóa, tìm kiếm đơn hàng theo mã đơn hàng 
     router.get('/api/get-all-menu-order', menuorderController.handleGetAllMenuOrder);
-    // router.get('/api/get-all-product-saling', menuorderController.handleGetAllProductSaling);
-    router.get('/api/get-all-product-by-number-order', menuorderController.handleGetAllProductById);
+    router.get('/api/get-all-product-by-number-order', menuorderController.handleGetAllProductByIdOrder);
     router.post('/api/create-menu-order', menuorderController.handleCreateMenuOrder);
     router.put('/api/edit-menu-order', menuorderController.handleEditMenuOrder);
     router.delete('/api/delete-menu-order', menuorderController.handleDeleteMenuOrder);

@@ -68,7 +68,6 @@ let handleEditProduct = async(req, res) => {
             errCode: 0,
             errMessage: 'OKE',
         })
-        
     } 
     catch (e) {
         return res.status(500).json({
